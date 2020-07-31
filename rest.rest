@@ -15,3 +15,13 @@ Content-Type: application/json
     "email":"samul@gmail.com",
     "password":"123123"
 }
+
+
+###
+POST https://git.heroku.com/enigmatic-caverns-85511.git/api/user
+Content-Type: application/json
+
+{
+    "email":"zama@gmail.com",
+    "password":"123123"
+}
