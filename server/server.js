@@ -19,7 +19,9 @@ app.use(cookieParser())
 
 const port = process.env.PORT || 3000;
 
-
+app.get('/',(req,res)=>{
+    res.send('Welcome')
+})
 app.post('/api/user',(req,res)=>{
         const user = new User({
             email:req.body.email,
