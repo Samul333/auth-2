@@ -6,10 +6,11 @@ const bcrypt = require('bcryptjs')
 const cookieParser = require('cookie-parser')
 const app = express();
 const {auth} = require('./middleware/auth')
+require('dotenv').config(); 
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb+srv://Samul:killinginthenameof@cluster0.h638k.mongodb.net/pushProd?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex:true},
+mongoose.connect(process.env.DATABASE_URI,{useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex:true},
 ()=>console.log('Connected to the Database'))
 
 //Middleware
