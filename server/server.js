@@ -20,7 +20,7 @@ app.use(cookieParser())
 const port = process.env.PORT || 3000;
 
 app.get('/',(req,res)=>{
-    res.send('Welcome')
+    res.json({message:'Hey welcome to this simple API application'})
 })
 app.post('/api/user',(req,res)=>{
         const user = new User({
